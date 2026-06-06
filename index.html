@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>InnovateX Premium | Soporte e Instalación Remota</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:70px;
+    color:#00c8ff;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:22px;
+    color:#d6d6d6;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 38px;
+    background:#00c8ff;
+    color:black;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+.section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:60px;
+    color:#00c8ff;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+
+    background:rgba(22,27,34,.88);
+    border:1px solid rgba(255,255,255,.06);
+    padding:35px;
+    border-radius:24px;
+    transition:.35s ease;
+    backdrop-filter:blur(10px);
+    position:relative;
+    overflow:hidden;
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.35);
+}
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,200,255,.25);
+}
+
+.card h3{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#00c8ff;
+}
+
+.card ul{
+    list-style:none;
+    margin-bottom:30px;
+}
+
+.card ul li{
+    margin:12px 0;
+    color:#d2d2d2;
+}
+
+
+
+.drive-btn:hover{
+    background:white;
+}
+
+/* SUPPORT */
+
+.support{
+    background:#11161d;
+    text-align:center;
+    padding:100px 10%;
+}
+
+.support h2{
+    font-size:48px;
+    color:#00c8ff;
+    margin-bottom:25px;
+}
+
+.support p{
+    color:#cfcfcf;
+    line-height:2;
+    max-width:950px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#090c10;
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.title{
+    font-size:35px;
+}
+
+.support h2{
+    font-size:35px;
+}
+
+}
+/* LINKS ADOBE PRO */
+
+.adobe-links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:25px;
+}
+
+
+
+/* EFECTO BRILLO */
+
+.adobe-links a::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+    transition:.6s;
+}
+
+.adobe-links a:hover::before{
+    left:100%;
+}
+
+/* EFECTO HOVER */
+
+.adobe-links a:hover{
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 0 25px rgba(0,200,255,.8);
+    background:linear-gradient(135deg,#00e1ff,#00a2ff);
+}
+/* BOTON CURSO PREMIUM */
+
+.card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(
+    90deg,
+    #00bfff,
+    #3b82f6,
+    transparent
+    );
+    opacity:.7;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border:1px solid rgba(0,191,255,.25);
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.45),
+    0 0 20px rgba(0,191,255,.12);
+}
+
+/* TITULOS */
+
+.card h3{
+    font-size:24px;
+    margin-bottom:25px;
+    color:#ffffff;
+    font-weight:600;
+    line-height:1.4;
+}
+
+/* LINKS */
+
+.adobe-links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+/* BOTONES PROFESIONALES */
+
+.adobe-links a,
+.drive-btn{
+    text-decoration:none;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+    color:#dbe7ff;
+    padding:16px 18px;
+    border-radius:16px;
+    font-weight:500;
+    transition:.3s ease;
+    position:relative;
+    overflow:hidden;
+    letter-spacing:.3px;
+}
+
+/* EFECTO HOVER FINO */
+
+.adobe-links a:hover,
+.drive-btn:hover{
+    background:rgba(0,191,255,.08);
+    border-color:rgba(0,191,255,.25);
+    transform:translateX(6px);
+    color:white;
+    box-shadow:
+    0 0 18px rgba(0,191,255,.12);
+}
+
+/* BOTON CURSO PREMIUM */
+
+.curso-btn{
+    background:linear-gradient(
+    135deg,
+    #ff7b00,
+    #ff4d00
+    ) !important;
+
+    border:none !important;
+    color:white !important;
+    font-weight:700 !important;
+
+    box-shadow:
+    0 8px 20px rgba(255,94,0,.25);
+}
+
+.curso-btn:hover{
+    transform:translateY(-4px) scale(1.02) !important;
+
+    box-shadow:
+    0 12px 30px rgba(255,94,0,.35) !important;
+}
+
+/* LISTAS */
+
+.card ul li{
+    margin:14px 0;
+    color:#b7c2d0;
+    font-size:15px;
+}
+
+/* TITULOS GENERALES */
+
+.title{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:70px;
+    color:white;
+    font-weight:700;
+}
+
+/* FONDO GENERAL MÁS PREMIUM */
+
+body{
+    background:
+    radial-gradient(circle at top,#111827,#070b11 70%);
+    color:white;
+}
+
+.curso-btn:hover{
+    transform:translateY(-8px) scale(1.05) !important;
+    box-shadow:0 0 35px rgba(255,140,0,.9) !important;
+}
+
+/* EFECTO BRILLO */
+
+@keyframes brilloCurso{
+
+0%{
+box-shadow:0 0 10px rgba(255,140,0,.3);
+}
+
+50%{
+box-shadow:0 0 30px rgba(255,140,0,.9);
+}
+
+100%{
+box-s56hadow:0 0 10px rgba(255,140,0,.3);
+}
+
+}
+.card h3 span{
+    background:#0ea5e9;
+    color:white;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:30px;
+    margin-left:8px;
+}
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top right,
+    rgba(0,191,255,.15),
+    transparent 40%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:950px;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    padding:12px 22px;
+    border-radius:50px;
+    margin-bottom:30px;
+    color:#7dd3fc;
+    backdrop-filter:blur(10px);
+    font-size:14px;
+    letter-spacing:.5px;
+}
+
+.hero h1{
+    font-size:78px;
+    font-weight:800;
+    margin-bottom:25px;
+    line-height:1.1;
+    color:white;
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero-text{
+    font-size:21px;
+    color:#cbd5e1;
+    line-height:1.9;
+    max-width:850px;
+    margin:auto;
+    margin-bottom:45px;
+}
+
+.hero-features{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-bottom:45px;
+}
+
+.feature{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    padding:14px 22px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#dbeafe;
+    backdrop-filter:blur(10px);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+    border-color:rgba(56,189,248,.3);
+    background:rgba(56,189,248,.08);
+}
+
+.feature i{
+    color:#38bdf8;
+    font-size:18px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.whatsapp-btn{
+    background:linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+    ) !important;
+
+    color:white !important;
+    box-shadow:
+    0 10px 25px rgba(34,197,94,.25);
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:
+    0 15px 35px rgba(34,197,94,.35);
+}
+
+.secondary-btn{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    color:white !important;
+}
+
+.secondary-btn:hover{
+    background:rgba(255,255,255,.08);
+}
+
+.btn i{
+    margin-right:10px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:52px;
+}
+
+.hero-text{
+    font-size:17px;
+}
+
+.hero-features{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+}
+.support{
+    position:relative;
+    background:
+    linear-gradient(
+    180deg,
+    #0b1118,
+    #06090f
+    );
+    overflow:hidden;
+}
+
+.support::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(56,189,248,.08);
+    filter:blur(120px);
+    top:-150px;
+    right:-100px;
+}
+
+.support-container{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+    margin:auto;
+}
+
+.support-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    padding:12px 22px;
+    border-radius:50px;
+    margin-bottom:30px;
+    color:#7dd3fc;
+    font-size:14px;
+    backdrop-filter:blur(10px);
+}
+
+.support h2{
+    font-size:58px;
+    font-weight:800;
+    line-height:1.2;
+    margin-bottom:30px;
+    color:white;
+}
+
+.support-text{
+    max-width:950px;
+    margin:auto;
+    font-size:20px;
+    line-height:2;
+    color:#cbd5e1;
+    margin-bottom:70px;
+}
+
+.support-features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-bottom:60px;
+}
+
+.support-box{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    padding:35px;
+    border-radius:24px;
+    transition:.3s ease;
+    backdrop-filter:blur(10px);
+}
+
+.support-box:hover{
+    transform:translateY(-8px);
+    border-color:rgba(56,189,248,.3);
+    background:rgba(56,189,248,.06);
+}
+
+.support-box i{
+    font-size:38px;
+    color:#38bdf8;
+    margin-bottom:22px;
+}
+
+.support-box h3{
+    font-size:24px;
+    margin-bottom:15px;
+    color:white;
+}
+
+.support-box p{
+    color:#b8c4d6;
+    line-height:1.8;
+}
+
+.support-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+@media(max-width:768px){
+
+.support h2{
+    font-size:40px;
+}
+
+.support-text{
+    font-size:17px;
+}
+
+.support-buttons{
+    flex-direction:column;
+}
+
+}
+/* LOGO IMAGEN PREMIUM */
+
+.main-logo{
+    width:95px;
+    height:95px;
+    object-fit:cover;
+
+    border-radius:26px;
+
+    background:rgba(255,255,255,.05);
+
+    padding:10px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.45),
+    0 0 25px rgba(56,189,248,.25);
+
+    transition:.4s ease;
+
+    animation:logoFloat 4s ease-in-out infinite;
+}
+
+/* EFECTO HOVER */
+
+.main-logo:hover{
+    transform:scale(1.06) rotate(2deg);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.55),
+    0 0 35px rgba(56,189,248,.45);
+}
+
+/* EFECTO FLOTANTE */
+
+@keyframes logoFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.main-logo{
+    width:80px;
+    height:80px;
+}
+
+}
+.subtitulo-categoria{
+    margin-top:22px;
+    margin-bottom:12px;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:#7dd3fc;
+
+    border-left:3px solid #0ea5e9;
+    padding-left:12px;
+
+    letter-spacing:.3px;
+}
+/* TIKTOK BUTTON PREMIUM */
+
+.tiktok-logo{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    margin-top:20px;
+
+    padding:14px 24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    color:white;
+    text-decoration:none;
+
+    font-weight:600;
+    font-size:15px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ICONO */
+
+.tiktok-logo i{
+    font-size:22px;
+
+    background:linear-gradient(
+    135deg,
+    #00f2ea,
+    #ff0050
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* HOVER */
+
+.tiktok-logo:hover{
+    transform:translateY(-5px) scale(1.03);
+
+    border-color:rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 25px rgba(255,0,80,.25);
+}
+
+/* ARREGLAR ALTURAS DE LAS CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+
+    align-items:stretch;
+}
+
+/* TODAS LAS TARJETAS MISMA ALTURA */
+
+.card{
+overflow:hidden;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:flex-start;
+}
+
+/* CONTENIDO INTERNO */
+
+.adobe-links{
+    flex:1;
+}
+
+/* EVITA ESPACIOS GIGANTES */
+
+.card h3{
+    min-height:auto;
+}
+
+/* RESPONSIVE MÁS LIMPIO */
+
+@media(max-width:768px){
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* PEDIDOS CLIENTES PREMIUM */
+
+.pedidos-card{
+    border:2px solid rgba(255,193,7,.4);
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,193,7,.08),
+    rgba(255,140,0,.05)
+    );
+
+    box-shadow:
+    0 0 35px rgba(255,193,7,.15);
+
+    animation:pedidoGlow 2s infinite;
+}
+
+.pedidos-card h3{
+    color:#ffd54f;
+}
+
+.pedido-btn{
+    background:linear-gradient(
+    135deg,
+    #00c8ff,
+    #0066ff
+    ) !important;
+
+    color:white !important;
+    font-weight:700;
+    border:none !important;
+
+    box-shadow:
+    0 8px 25px rgba(0,200,255,.45);
+}
+.pedido-btn:hover{
+    transform:translateY(-4px) scale(1.04);
+
+    box-shadow:
+    0 0 35px rgba(0,200,255,.9);
+}
+
+@keyframes pedidoGlow{
+
+0%{
+box-shadow:0 0 15px rgba(255,193,7,.2);
+}
+
+50%{
+box-shadow:0 0 35px rgba(255,193,7,.6);
+}
+
+100%{
+box-shadow:0 0 15px rgba(255,193,7,.2);
+}
+
+}
+.adobe-links a i{
+    margin-right:12px;
+    width:22px;
+    text-align:center;
+    color:#38bdf8;
+    font-size:18px;
+}
+
+
+.software-logo{
+    width:36px;
+    height:36px;
+    object-fit:contain;
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+.pedidos-card{
+    position:relative;
+}
+
+.pedidos-card span{
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:white;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:30px;
+    margin-left:8px;
+    font-weight:700;
+}
+
+.pedidos-card::after{
+    content:'⭐';
+    position:absolute;
+    top:18px;
+    right:18px;
+    font-size:22px;
+    animation:floatStar 2s infinite ease-in-out;
+}
+
+@keyframes floatStar{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+<div class="logo-box">
+
+<img src="logo.png" alt="InnovateX Logo" class="main-logo">
+
+<div class="logo-text">
+    <a href="https://www.tiktok.com/@innovatexsoporte?is_from_webapp=1&sender_device=pc" target="_blank" class="tiktok-logo">
+    <i class="fa-brands fa-tiktok"></i>
+    Síguenos en TikTok
+</a>
+<h2>InnovateX</h2>
+<span>PREMIUM SUPPORT</span>
+</div>
+
+</div>
+<div class="hero-badge">
+<i class="fa-solid fa-shield-halved"></i>
+Soporte Técnico Premium 2026
+</div>
+
+<h1>
+InnovateX <span>Premium</span>
+</h1>
+
+<p class="hero-text">
+Especialistas en instalación remota de programas profesionales,
+optimización de computadoras, activaciones, recuperación de sistemas
+y soporte técnico personalizado para estudiantes, empresas y creadores de contenido.
+</p>
+
+<div class="hero-features">
+
+<div class="feature">
+<i class="fa-solid fa-laptop-medical"></i>
+<span>Soporte Remoto</span>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-download"></i>
+<span>Instalación Profesional</span>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-shield-virus"></i>
+<span>Optimización y Seguridad</span>
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<a href="https://wa.link/4s6gil" class="btn whatsapp-btn" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+Contactar por WhatsApp
+</a>
+
+<a href="#catalogo-software" class="btn secondary-btn">
+<i class="fa-solid fa-folder-open"></i>
+Ver Catálogo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CARPETAS -->
+
+<!-- CATALOGO SOFTWARE -->
+
+<section class="section" id="catalogo-software">
+
+<h2 class="title">
+🗂️ Catálogo Profesional
+</h2>
+
+<div class="cards">
+
+<!-- DRIVERS -->
+
+
+<!-- CURSOS GRATUITOS -->
+
+<div class="card pedidos-card">
+
+<h3>
+<i class="fa-solid fa-gift"></i>
+CURSOS GRATUITOS
+<span>GRATIS</span>
+</h3>
+
+<p style="color:#cbd5e1; margin-bottom:20px;">
+Accede gratis a cursos profesionales de Excel, Power BI, SQL, Data Analytics,
+Word, PowerPoint, Project y mucho más. Ideal para estudiantes, emprendedores
+y profesionales que desean mejorar sus habilidades laborales.
+</p>
+
+<div class="adobe-links">
+
+<a href="" target="_blank" class="pedido-btn">
+<i class="fa-solid fa-graduation-cap"></i>
+MEGA PACK Office & Data Analytics
+</a>
+
+<a href="" target="_blank">
+<i class="fa-solid fa-file-excel"></i>
+300 Plantillas Profesionales Excel
+</a>
+
+
+<a href="" target="_blank">
+<i class="fa-solid fa-file-powerpoint"></i>
+Curso Word y PowerPoint
+</a>
+
+<a href="" target="_blank">
+<i class="fa-solid fa-compass-drafting"></i>
+Curso Gratuito de AutoCAD
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card pedidos-card">
+
+<h3>
+<i class="fa-solid fa-graduation-cap"></i>
+Cursos de Diseño Gráfico
+<span>NUEVO</span>
+</h3>
+
+<p style="color:#cbd5e1; margin-bottom:20px;">
+🎓 Capacítate desde casa con cursos profesionales seleccionados.
+Acceso inmediato, contenido actualizado y materiales complementarios para potenciar tus habilidades laborales.
+</p>
+
+<div class="adobe-links">
+
+<a href="" target="_blank" class="pedido-btn">
+<i class="fa-solid fa-bezier-curve"></i>
+Diseño Gráfico Profesional
+</a>
+
+<a href="" target="_blank">
+<i class="fa-solid fa-object-group"></i>
+Plantillas Premium Editables
+</a>
+<a href="" target="_blank">
+<i class="fa-solid fa-print"></i>
+Curso de Sublimación
+</a>
+
+<a href="" target="_blank">
+<i class="fa-solid fa-camera-retro"></i>
+Curso de Fotografía Digital
+</a>
+
+</div>
+
+</div>
+
+<!-- PEDIDOS DE PROGRAMAS -->
+
+<div class="card pedidos-card">
+
+<h3>
+<i class="fa-solid fa-folder-plus"></i>
+PEDIDOS DE PROGRAMAS
+<span>NUEVO</span>
+</h3>
+
+<p style="color:#cbd5e1; margin-bottom:20px;">
+¿No encuentras el software que necesitas? Ingresa a nuestra carpeta exclusiva de pedidos y solicita cualquier programa profesional. Revisamos cada solicitud y agregamos constantemente nuevo contenido para nuestros clientes.
+</p>
+
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1tyAnJqsRLKZtOptVsruH0kjUyzsG5um1?usp=sharing" target="_blank" class="pedido-btn">
+<i class="fa-solid fa-folder-open"></i>
+Abrir Carpeta de Pedidos
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ADOBE -->
+
+<!-- ADOBE -->
+
+<div class="card">
+
+<h3>
+<i class="fa-brands fa-adobe"></i>
+Adobe Creative Cloud <span>2025</span>
+</h3>
+
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1QPWTAM-6i2a-vJ5CyK6u4wJg3h31aqzW?usp=sharing" target="_blank">
+
+<img src="data:image/png;base64,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" class="software-logo">
+
+Adobe Photoshop 2025
+
+</a>
+
+<a href="https://drive.google.com/drive/folders/1ecfOaFKdhrXonMIsdTDqgA8I9UycomkO?usp=sharing" target="_blank">
+<img src="https://sellsa.co.za/image/product/331385/MEDIUM/0/69026" alt="Illustrator" class="software-logo">
+Adobe Illustrator 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/17sXhs_NwxW8N7ODrX4sxcspsN1HYTAsD?usp=sharing" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Adobe_Lightroom_Classic_CC_2026_icon.svg/960px-Adobe_Lightroom_Classic_CC_2026_icon.svg.png" alt="Lightroom Classic" class="software-logo">
+Adobe Lightroom Classic 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1TYGatBTGfBvMJkvVctrwHiH5aRDhphCx?usp=sharing" target="_blank">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdH-Ifzjr2tzlJGASuoZbBYUoZIwWQ_c0P_Q&s" alt="Premiere Pro" class="software-logo">
+Adobe Premiere Pro 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1KdklHqur9YXMes-ieNLnI5BCHSd-o5j1?usp=sharing" target="_blank">
+<img src="https://pbs.twimg.com/profile_images/1272878358150275078/iBJehkOi_400x400.png" alt="After Effects" class="software-logo">
+Adobe After Effects 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1fnLEvuLX_C2saihTjbB_S4alUc5gu3T9?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fadobe-audition-2022-0003%2FAdobe_Audition_CC_icon.png&w=64&q=75" alt="Audition" class="software-logo">
+Adobe Audition 2025
+</a>
+<a href="https://drive.google.com/drive/folders/130GC304k5jKh9M8p37DgvRhWOAboYZY7?usp=sharing" target="_blank">
+<img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/adobe-substance-3d-painter-icon.png" alt="Substance 3D Painter" class="software-logo">
+Adobe Substance 3D Painter 2025
+</a>
+<a href="https://drive.google.com/drive/folders/1wKZUXEwUsabopT8wtPTfXDLvJen_3uzE?usp=drive_link" target="_blank">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM7cLay4Z0Vtvy9XBjylwMgD9t-w8DZpLCTw&s" alt="Substance 3D Designer" class="software-logo">
+Adobe Substance3D Designer 2025
+</a>
+<a href="https://drive.google.com/drive/folders/1HK_zSZL_YSBBfhAO7FutizJIsTn_kjbo?usp=sharing" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/500px-Adobe_InDesign_CC_icon.svg.png" alt="InDesign" class="software-logo">
+Adobe InDesign 2025
+</a>
+
+</div>
+
+</div>
+<div class="card">
+
+<h3>
+<i class="fa-brands fa-adobe"></i>
+Adobe Creative Cloud <span>2026</span>
+</h3>
+
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1V-18Ri_eABBJeZd3_vF2YMKPGfDWVHxI?usp=sharing" target="_blank">
+<img src="data:image/png;base64,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" class="software-logo">
+
+Adobe Photoshop 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1DZudGxnmwJQ_-bDC9oaD1CQsun55qhBt?usp=sharing" target="_blank">
+<img src="https://sellsa.co.za/image/product/331385/MEDIUM/0/69026" alt="Illustrator" class="software-logo">
+Adobe Illustrator 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1QqOYjGqmYfsEdp6BzkIC8FkQlPkruFYr?usp=sharing" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Adobe_Lightroom_Classic_CC_2026_icon.svg/960px-Adobe_Lightroom_Classic_CC_2026_icon.svg.png" alt="Lightroom Classic" class="software-logo">
+
+Adobe Lightroom Classic 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1kUFerQzE5kUDhnltkEdyy4-5e-FSwt0e?usp=sharing" target="_blank">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdH-Ifzjr2tzlJGASuoZbBYUoZIwWQ_c0P_Q&s" alt="Premiere Pro" class="software-logo">
+Adobe Premiere Pro 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1RP1sLOAJ6JhlO-soxnxLzI0qG9KsQZon?usp=sharing" target="_blank">
+<img src="https://pbs.twimg.com/profile_images/1272878358150275078/iBJehkOi_400x400.png" alt="After Effects" class="software-logo">
+Adobe After Effects 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1DZ7LF2mXpKvw7FzFbLwAwHGBvd4yoVOU?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fadobe-audition-2022-0003%2FAdobe_Audition_CC_icon.png&w=64&q=75" alt="Audition" class="software-logo">
+Adobe Audition 2026
+</a>
+<a href="https://drive.google.com/drive/folders/130GC304k5jKh9M8p37DgvRhWOAboYZY7?usp=drive_link" target="_blank">
+<img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/adobe-substance-3d-painter-icon.png" alt="Substance 3D Painter" class="software-logo">
+Adobe Substance 3D Painter 2026
+</a>
+<a href="https://drive.google.com/drive/folders/1wKZUXEwUsabopT8wtPTfXDLvJen_3uzE?usp=sharing" target="_blank">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM7cLay4Z0Vtvy9XBjylwMgD9t-w8DZpLCTw&s" alt="Substance 3D Designer" class="software-logo">
+Adobe Substance 3D Designer 2026
+</a>
+<a href="https://drive.google.com/drive/folders/1N965OvSBgFAe6T5DcDmfHuUMhr3dBnlO?usp=sharing" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/500px-Adobe_InDesign_CC_icon.svg.png" alt="InDesign" class="software-logo">
+Adobe InDesign 2026
+</a>
+
+</div>
+
+</div>
+<!-- AUTODESK PREMIUM -->
+
+<div class="card">
+
+<h3>Ingeniería & Arquitectura (Autodesk) 2025</h3>
+
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1fiyn9PyuXxmOpulfehDiof_n_HvLkCUk?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-autocad%2FAutoCAD-2023.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+Autodesk AutoCAD 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1tiHlD9ObnpRQHP_k6mksET7GsnScbrQe?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-revit-0001%2Frevit-autodesk-logo.png&w=64&q=75" alt="Revit" class="software-logo"> 
+Autodesk Revit  2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1o0L42O0vPNVpepeTBarXtJ8HhVkJORqV?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-autocad-civil-3d-0003%2FAutodesk-Autocad-Civil-3D.png&w=64&q=75" alt="AutoCAD Civil 3D" class="software-logo"> 
+Autodesk AutoCAD Civil 3D 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1BqLbHsc4BuI1uRNfu9ERd90HlMAw8oeK?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-infraworks%2Fautodesk-infraworks-1.png&w=64&q=75" alt="InfraWorks" class="software-logo">
+Autodesk InfraWorks 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1-r2tdfW2VCsAYP9PARXXCPMGErTDcyN6?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-navisworks-manage%2FAutodesk-Navisworks-Manage-icon.png&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+Autodesk Navisworks Manage 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1FtB0V4HCISh0iFblpmF6cW1l_4J6j1pM?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-maya-0001%2Fautodesk-maya-icon.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+Autodesk Maya 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/1hNqXqtjjnYFy2OP0uYX90AJJvG7eEGH4?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-3ds-max%2F6894775b68258-autodesk-3ds-max-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+Autodesk 3DS MAX 2025
+</a>
+<a href="https://drive.google.com/drive/folders/1vFTnsGydcBcDx16kHwonBhG4qZKiVeRX?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-recap-pro-version%2F69ce65aa365b0-autodesk-recap-pro-version-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+Autodesk ReCap Pro 2025
+</a>
+<a href="https://drive.google.com/drive/folders/1WpV1_hkFFRatMNJCPkQiMHyr2UV3ijVw?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-alias-autostudio-version%2F69e0ca838e530-autodesk-alias-autostudio-version-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+Autodesk Alias 2025
+</a>
+<a href="https://drive.google.com/drive/folders/1Ex53hZ3odxBIVy34Bb4Pd3V6_7K8Q-YL?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-vault-products%2FAutodesk-Vault-Professional.png&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+Autodesk Vault Professional 2025
+</a>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Ingeniería & Arquitectura (Autodesk) 2026</h3>
+
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1HFNutSewesr_UvVCBc3i2K_UkWPKifTR?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-autocad%2FAutoCAD-2023.png&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+ 
+Autodesk AutoCAD 2026
+</a>
+<a href="https://drive.google.com/drive/folders/1g-ZAXQj6S5ma6rUDbrNKcUGHGQWa9H14?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-inventor%2FAutodesk-Inventor-Professional.png&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+
+Autodesk Inventor Pro 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1i03bFE_Gr6QbxJeTFMOQLxNZVj5p5J1W?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-revit-0001%2Frevit-autodesk-logo.png&w=64&q=75" alt="Revit" class="software-logo">  
+Autodesk Revit  2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1Z8Tmsd31WmjpwmNCVrVolBcCZWZv3feD?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-autocad-civil-3d-0003%2FAutodesk-Autocad-Civil-3D.png&w=64&q=75" alt="AutoCAD Civil 3D" class="software-logo">
+Autodesk AutoCAD Civil 3D 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1Ugi9iv5damta3yCFOkEC4CaxDCJg97Zf?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-infraworks%2Fautodesk-infraworks-1.png&w=64&q=75" alt="Revit" class="software-logo">  
+
+Autodesk InfraWorks 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/18fghE7VJU9URj69C6_FBExkirZidLAcs?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-navisworks-manage%2FAutodesk-Navisworks-Manage-icon.png&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+ 
+Autodesk Navisworks Manage 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1Qpdf6W9RKMsjT9NMba3Bm7mnz-IAajr0?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-maya-0001%2Fautodesk-maya-icon.png&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+Autodesk Maya 2026
+</a>
+
+<a href="https://drive.google.com/drive/folders/1nCbTWnjhc4qlsvm05VGp8Tt8tuTHog0a?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-3ds-max%2F6894775b68258-autodesk-3ds-max-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+ 
+Autodesk 3DS MAX 2026
+</a>
+<a href="https://drive.google.com/drive/folders/1Ysy6DoRd3FNBMlGF_IN1bRdEU59PuLRk?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-recap-pro-version%2F69ce65aa365b0-autodesk-recap-pro-version-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+
+Autodesk ReCap Pro 2026
+</a>
+<a href="https://drive.google.com/drive/folders/1f-6Gm2KBADffr7aNpG9GXXM_qfM08NZj?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-alias-autostudio-version%2F69e0ca838e530-autodesk-alias-autostudio-version-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+ 
+Autodesk Alias 2026
+</a>
+<a href="https://drive.google.com/drive/folders/1Byfj-xUfhINc0uAhJqzb1FpgtBate6UZ?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fautodesk-vault-products%2FAutodesk-Vault-Professional.png&w=64&q=75" alt="AutoCAD" class="software-logo"> 
+ 
+Autodesk Vault Professional 2026
+</a>
+</div>
+
+</div>
+<!-- FILMORA -->
+
+<div class="card">
+
+<h3>
+<i class="fa-solid fa-desktop"></i>
+Software Básico para PC
+</h3>
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1C-MqM3ti6-GGGy8t2WohQRpiEp4MZAYK?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F11%2Fmicrosoft-office-2024%2F6551d12d6136e-microsoft-office-2024-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+ OFFICE 2024
+</a>
+<div class="subtitulo-categoria">
+ Utilidades y PDF
+</div>
+<a href="https://drive.google.com/drive/folders/1IDyJ1vEYt4StyTgsiBICb5M9NIejVPcq?usp=drive_link" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fadobe-acrobat-1008%2FIcon_Adobe-Acrobat-Pro-DC_free-download.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+    Adobe Acrobat Pro DC 2025
+</a>
+
+<a href="https://drive.google.com/drive/folders/16aQ07htTGpdLHsvtDE07ZvJf7PO9Y4XA?usp=drive_link" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Ffoxit-phantompdf%2F663cb586116a7-foxit-phantompdf-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+ 
+    Foxit PDF Editor Pro
+</a>
+
+<a href="https://drive.google.com/drive/folders/1XxbrZC8w6cDrVvl1IK2qeTTg33sLR--h?usp=drive_link" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fnitro-pro-0001%2FNitro-Pro-logo.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+    Nitro PDF Pro 2025
+</a>
+
+
+<div class="subtitulo-categoria">
+ Compresión y archivos
+</div>
+
+<a href="https://drive.google.com/drive/folders/1X8_hUlX_dnzd9tCFEbLOdTQGWcYYG7DO?usp=sharing" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fwinrar%2FWinRAR-Icon.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    WinRAR 7.20 final
+</a>
+
+<div class="subtitulo-categoria">
+ Reproductores multimedia
+</div>
+<a href="https://drive.google.com/file/d/1jhvIMF7UotJB2l9UWPAHyiKYIZqHC7m9/view?usp=sharing" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fvlc-media-player%2FVLC_Icon.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    VLC Media Player
+</a>
+
+<a href="https://drive.google.com/drive/folders/1XzIl5BRMu7zogEuv0HQ3YMgS56NMy0Dn?usp=drive_link" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fkmplayer%2F662a05024e801-kmplayer-Icon.webp&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    The KMPlayer 2026
+</a>
+
+<div class="subtitulo-categoria">
+ Drivers y optimización
+</div>
+<a href="https://drive.google.com/drive/folders/1xyz77RnP1R0q-ofYVPBbnt4m2IRKbTSy?usp=drive_link" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fiobit-driver-booster%2FIObit-Driver-Booster-Pro.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    Driver Booster
+</a><a href="https://drive.google.com/drive/folders/1Kqe2ewPH8f_gtJ8ZhdCA04DurL9Bm7P6?usp=drive_link" target="_blank">
+ <img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fccleaner%2F664f20298976a-ccleaner-Icon.webp&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+   
+ CCleaner
+</a>
+
+</div>
+
+</div>
+
+<!-- AUTODESK -->
+
+<div class="card">
+
+<h3>
+<i class="fa-solid fa-film"></i>
+Edición Profesional Full
+</h3>
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1gsye0qKkV6ZmNty0Ld7F9oq0gLeLLDRZ?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Ffilmorax-12%2F665478be0f5e8-filmorax-Icon.webp&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    Filmora 14
+</a>
+<div class="subtitulo-categoria">
+ Edición de Video
+</div>
+<a href="https://drive.google.com/drive/folders/15XKi_MWc2WxSfcGN099F_ZZTaGzzkTUn?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fdavinci-resolve%2FDaVinci-Resolve.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    DaVinci Resolve 21
+</a>
+<a href="https://drive.google.com/drive/folders/1Se8mtyDEM4XWB8EFtM0EO4B8TIvdcb-c?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fmagix-vegas-pro%2F69cb724f686ad-magix-vegas-pro-Icon.webp&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    VEGAS Pro
+</a><a href="https://drive.google.com/drive/folders/1h4m7Q7yFuHBEIMBl5ANEsWSxrIDS3T-1?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fcapcut%2Fcapcut-logo.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    CapCut
+</a><a href="https://drive.google.com/drive/folders/1-4lITEMx-ImQGart7Bb9UHK5whQcIUea?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Ftechsmith-camtasia%2F66289f9ae70df-techsmith-camtasia-Icon.webp&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    Camtasia
+</a>
+
+<div class="subtitulo-categoria">
+Audio y Voz
+</div>
+
+<a href="https://drive.google.com/drive/folders/1i-BQNC9vaPg_l0xlXKRST5MtSXL-8E6Z?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Faudacity%2Faudacity-icon.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    Audacity
+</a>
+<a href="https://drive.google.com/drive/folders/10HJlnAUACdSnGV5Cj3avAp5zxJJpXb9j?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fflstudio-20%2Ffl-studio-logo.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    FL Studio
+</a>
+<a href="https://drive.google.com/drive/folders/1ZtXPyM-sIE4p-4fLR3ikAD64X7MmpNnt?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fvoicemod%2FVoicemod-Pro-Icon.png&w=64&q=75" alt="Substance 3D Painter" class="software-logo">
+
+    Voicemod
+</a>
+</div>
+
+</div>
+
+<!-- COREL -->
+
+<div class="card">
+
+<h3>
+<i class="fa-solid fa-palette"></i>
+Diseño Gráfico e Ilustración
+</h3>
+<div class="adobe-links">
+
+<a href="https://drive.google.com/drive/folders/1755aYiFNVTNmRx4JOXDrjMcbT56MyP5y?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fcoreldraw-graphics-suite%2FCorelDRAW.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    CorelDRAW 2026
+</a>
+<a href="https://drive.google.com/drive/folders/1hXa_by40WrCr2uPi7B-k0soz3ZyjpGsU?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fsketchup%2Fsketchup-pro.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    SketchUp 2026
+</a>
+
+<div class="subtitulo-categoria">
+Impresión y Negocios
+</div>
+<a href="https://drive.google.com/drive/folders/1VLlJn3c7cH4SN_5hDjTz5xpmDfNHlR4I?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fbartender-enterprise-version%2F693156053d1ed-bartender-enterprise-version-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    BarTender
+</a>
+<a href="https://drive.google.com/drive/folders/1YxF9IqppwzujNR0aAtvHoAuNZy3pTKhE?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F05%2Feximioussoft-poster-designer-5-00%2F646de0e309bee-eximioussoft-poster-designer-5-00-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    Poster Designer
+</a>
+<div class="subtitulo-categoria">
+Edición y Fotografía
+</div>
+<a href="https://drive.google.com/drive/folders/1NSnhwb9Pl4hXUteuZ1yF9lNA3mZpstHl?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fserif-affinity-photo%2FSerif-Affinity-Photo-logo.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    Affinity Photo
+</a>
+<a href="https://drive.google.com/drive/folders/1SMQb5tepM-jSHFuAwoOeAUWKbtkgeQ5p?usp=drive_link" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fphotoscape-x%2F66289eacb317a-photoscape-x-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    PhotoScape X
+</a>
+
+</div>
+
+</div>
+
+
+<!-- RECUPERACION -->
+
+<div class="card">
+
+<h3>
+<i class="fa-solid fa-screwdriver-wrench"></i>
+Recuperación y Optimización
+</h3>
+<div class="adobe-links">
+
+<a href="" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Feaseus-data-recovery-wizard%2FIcon_EaseUS-Data-Recovery-Wizard_free-download.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    EaseUS Data Recovery Wizard 
+</a>
+<div class="subtitulo-categoria">
+Recuperación de Archivos
+</div>
+<a href="https://drive.google.com/drive/folders/1z7GoR_ytaHS_7ymD7tJ4Nw8jwYU0rD0a?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Frecuva%2FRecuva.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    Recuva
+</a>
+<a href="https://drive.google.com/drive/folders/1-Br4U_kJyjIqEzj1ZOe3pCSZQ5IwidDy?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fwondershare-recoverit-0001%2F66741ae6364e8-wondershare-recoverit-0001-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    Wondershare Recoverit
+</a>
+<a href="https://drive.google.com/drive/folders/1sonM-QHm2JgVaphtEDltEb2Nv2L5GYN1?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fminitool-power-data-recovery-business%2F66868a7958c5a-minitool-power-data-recovery-business-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    MiniTool Power Data Recovery
+</a>
+
+</div>
+
+</div>
+<!-- BASICOS -->
+
+<!-- SEGURIDAD -->
+
+<div class="card">
+
+<h3>
+<i class="fa-solid fa-shield-halved"></i>
+Seguridad PC
+</h3>
+<div class="adobe-links">
+
+<a href="" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fkaspersky-total-security%2Fkaspersky-total-security-logo.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    Kaspersky
+</a>
+
+<a href="" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Feset-internet-security%2FESET-Internet-Security.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    ESET NOD32 Antivirus
+</a>
+
+<a href="" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fbitdefender-total-security%2FBitdefender-Anti-virus.png&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    Bitdefender Total Security
+</a>
+<a href="" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Favast-antivirus-free%2F6a0e95c1ddc20-avast-antivirus-free-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    Avast Premium Security
+</a>
+
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+<i class="fa-solid fa-shield-halved"></i>
+Acceso Remoto y Soporte
+</h3>
+<div class="adobe-links">
+
+<a href="https://drive.google.com/file/d/14708ttONAtAxedv2Ob8CRNukgJY88E1f/view?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2024%2F07%2Fanydesk-remote-desktop%2F6694b0e8a8eea-anydesk-remote-desktop-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    AnyDesk
+</a>
+
+<a href="https://drive.google.com/file/d/1k31kG8LIrtD8oU8ylhbScJYUfSy271f8/view?usp=sharing" target="_blank">
+<img src="https://filecr.com/_next/image/?url=https%3A%2F%2Fmedia.imgcdn.org%2Frepo%2F2023%2F03%2Fteam-viewer%2F6863c94587427-team-viewer-Icon.webp&w=64&q=75" alt="AutoCAD" class="software-logo">
+
+    TeamViewer
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PEDIDOS DE CLIENTES -->
+
+
+</section>
+
+
+<!-- SOPORTE -->
+
+<section class="support">
+
+<div class="support-container">
+
+<div class="support-badge">
+<i class="fa-solid fa-bolt"></i>
+InnovateX Premium Services
+</div>
+
+<h2>
+Impulsamos tu PC al siguiente nivel
+</h2>
+
+<p class="support-text">
+En InnovateX Premium ofrecemos instalación remota de programas profesionales,
+optimización avanzada de computadoras, activaciones, mantenimiento y soporte técnico personalizado.
+Trabajamos constantemente agregando nuevo contenido, actualizando carpetas,
+drivers y herramientas profesionales para brindarte un servicio moderno,
+rápido y confiable.
+</p>
+
+<div class="support-features">
+
+<div class="support-box">
+<i class="fa-solid fa-cloud-arrow-down"></i>
+<h3>Contenido Actualizado</h3>
+<p>
+Nuevos programas, versiones y herramientas agregadas constantemente.
+</p>
+</div>
+
+<div class="support-box">
+<i class="fa-solid fa-microchip"></i>
+<h3>Drivers & Optimización</h3>
+<p>
+Soluciones para mejorar el rendimiento y estabilidad de tu computadora.
+</p>
+</div>
+
+<div class="support-box">
+<i class="fa-solid fa-headset"></i>
+<h3>Asistencia Remota</h3>
+<p>
+Soporte técnico profesional mediante conexión remota personalizada.
+</p>
+</div>
+
+</div>
+
+<div class="support-buttons">
+
+<a href="https://wa.link/4s6gil" class="btn whatsapp-btn" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+Solicitar Soporte
+</a>
+
+<a href="#catalogo-software" class="btn secondary-btn">
+<i class="fa-solid fa-folder-open"></i>
+Explorar Catálogo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 InnovateX Premium | Soporte e Instalación Remota
+
+</footer>
+
+</body>
+</html>
